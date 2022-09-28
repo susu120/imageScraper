@@ -7,6 +7,7 @@ myconfig = r'--psm 6 --oem 3'
 
 text = pytesseract.image_to_string(PIL.Image.open('test.png'), config=myconfig)
 filename = open('result.txt', 'w+')
+print(text)
 print(text, file=filename)
 
 img = cv2.imread('test.png')
